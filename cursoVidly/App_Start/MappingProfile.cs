@@ -13,11 +13,18 @@ namespace cursoVidly.App_Start
 
         public MappingProfile()
         {
-            Mapper.CreateMap<Customers, CustomerDTO>().ForMember(m => m.Id, opt => opt.Ignore());
-            Mapper.CreateMap<CustomerDTO, Customers>().ForMember(m => m.Id, opt => opt.Ignore());
+            //Domain to DTO
+            Mapper.CreateMap<Customers, CustomerDTO>();
+            Mapper.CreateMap<Movies, MovieDTO>();
+            Mapper.CreateMap<MembershipType, MembershipTypeDTO>();
+            Mapper.CreateMap<Genre, GenreDTO>();
 
-            Mapper.CreateMap<Movies, MovieDTO>().ForMember(m => m.Id, opt => opt.Ignore());
+            //Dto to Domain
+            Mapper.CreateMap<CustomerDTO, Customers>().ForMember(m => m.Id, opt => opt.Ignore());
             Mapper.CreateMap<MovieDTO, Movies>().ForMember(m => m.Id, opt => opt.Ignore());
+
+            Mapper.CreateMap<Movies, MovieDTO>();
+            Mapper.CreateMap<MovieDTO, Movies>();
         }
     }
 

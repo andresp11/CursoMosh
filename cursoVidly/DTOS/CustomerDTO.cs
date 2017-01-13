@@ -17,8 +17,8 @@ namespace cursoVidly.DTOS
 
         public bool IsSuscribibedToNewsLetter { get; set; }
 
+        public MembershipTypeDTO MembershipType { get; set; }
         
-
         
         public byte MembershipTypeId { get; set; }
 

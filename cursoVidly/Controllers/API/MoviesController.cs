@@ -7,6 +7,7 @@ using System.Web.Http;
 using cursoVidly.Models;
 using cursoVidly.DTOS;
 using AutoMapper;
+using System.Data.Entity;
 
 
 namespace cursoVidly.Controllers.API
@@ -20,13 +21,16 @@ namespace cursoVidly.Controllers.API
             _context = new ApplicationDbContext();
         }
 
-        //GET /API/CUSTOMERS
-        public IEnumerable<MovieDTO> GetMovies()
+        //GET /API/Movies
+        public IHttpActionResult GetMovies()
         {
-            return _context.Movies.ToList().Select(Mapper.Map<Movies, MovieDTO>);
+            var movieDTO = _context.Movies.Include(c=> c.genre).
+                                ToList().
+                                Select(Mapper.Map<Movies, MovieDTO>);
+            return Ok(movieDTO);
         }
 
-        //Get /api/customers/1
+        //Get /api/Movies/1
         public IHttpActionResult GetMovie(int id)
         {
             var movie = _context.Movies.SingleOrDefault(c => c.Id == id);
@@ -37,7 +41,9 @@ namespace cursoVidly.Controllers.API
 
             return Ok(Mapper.Map<Movies, MovieDTO>(movie));
         }
-        // post /api/customers
+
+
+        // post /api/Movies
         [HttpPost]
         public IHttpActionResult CreateMovie(MovieDTO movieDTO)
         {
@@ -54,7 +60,7 @@ namespace cursoVidly.Controllers.API
         }
 
         [HttpPut]
-        //Put /api/customers/1
+        //Put /api/Movies/1
         public void UpdateMovie(int id, MovieDTO movieDTO)
         {
             if (!ModelState.IsValid)
@@ -76,7 +82,7 @@ namespace cursoVidly.Controllers.API
         }
 
         [HttpDelete]
-        //Delete /api/custome
+        //Delete /api/Movies/1
         public void DeleteMovie(int id)
         {
             var MovieInDb = _context.Movies.SingleOrDefault(c => c.Id == id);
