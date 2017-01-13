@@ -1,0 +1,29 @@
+﻿@model IEnumerable<cursoVidly.Models.Movies>
+@{
+    ViewBag.Title = "Movies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Movies</h2>
+<p>
+        @Html.ActionLink("New Movie", "New", "Movies", null, new { @class = "btn btn-primary" })
+
+</p>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Movies</th>
+                <th>Edit</th>
+                <th>Genre</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var Movie in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(Movie.Name, "Details", "Movies", new { id = Movie.Id }, null)</td>
+                    <td>@Html.ActionLink(Movie.Name, "Edit", "Movies", new { id = Movie.Id }, null)</td>
+                    <td>@Movie.genre.Name </td>
+                </tr>
+            }
+        </tbody>
+    </table>
