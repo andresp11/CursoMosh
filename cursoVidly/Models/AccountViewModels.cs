@@ -13,6 +13,10 @@ namespace cursoVidly.Models
         [Display(Name = "Driving License")]
         public string DrivingLicense { get; set; }
 
+        [Required]
+        [Display(Name = "Phone Number")]
+        public string PhoneNumer { get; set; }
+
     }
 
     public class ExternalLoginListViewModel
@@ -72,6 +76,11 @@ namespace cursoVidly.Models
         [Required]
         [Display(Name = "Driving License")]
         public string DrivingLicense { get; set; }
+
+        [Required]
+        [Display(Name = "Phone Number")]
+        public string PhoneNumer { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Correo electrónico")]

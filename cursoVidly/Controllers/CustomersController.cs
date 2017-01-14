@@ -36,6 +36,7 @@ namespace cursoVidly.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Save(Customers customer)
         {
             if (!ModelState.IsValid)
@@ -82,6 +83,8 @@ namespace cursoVidly.Controllers
 
             return View(customer);
         }
+
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Edit (int id)
         {
             var customer = _context.Customer.SingleOrDefault(c => c.Id == id);
