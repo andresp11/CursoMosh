@@ -54,9 +54,9 @@ namespace cursoVidly
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "332632407119775",
+               appSecret: "a7452eeb8ca0eb379ce22e05d9b7b076");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{

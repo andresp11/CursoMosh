@@ -16,7 +16,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44300</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -254,6 +254,14 @@
     <Compile Include="Migrations\201701100203215_deletefeedinmanualmovies.Designer.cs">
       <DependentUpon>201701100203215_deletefeedinmanualmovies.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701140127415_SeedUser.cs" />
+    <Compile Include="Migrations\201701140127415_SeedUser.Designer.cs">
+      <DependentUpon>201701140127415_SeedUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701140203032_adddrivinglicensetoapplicationuser.cs" />
+    <Compile Include="Migrations\201701140203032_adddrivinglicensetoapplicationuser.Designer.cs">
+      <DependentUpon>201701140203032_adddrivinglicensetoapplicationuser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customers.cs" />
@@ -263,6 +271,7 @@
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Min18YearsIfAMember.cs" />
     <Compile Include="Models\Movies.cs" />
+    <Compile Include="Models\RoleName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CustomerFormViewModel.cs" />
@@ -503,12 +512,13 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Movies\Random.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
-    <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\List.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Movies\Details.cshtml" />
     <Content Include="Views\Customers\CustomerForm.cshtml" />
     <Content Include="Views\Movies\MoviesForm.cshtml" />
+    <Content Include="Views\Movies\ReadOnlyList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -570,6 +580,12 @@
     <EmbeddedResource Include="Migrations\201701100203215_deletefeedinmanualmovies.resx">
       <DependentUpon>201701100203215_deletefeedinmanualmovies.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701140127415_SeedUser.resx">
+      <DependentUpon>201701140127415_SeedUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701140203032_adddrivinglicensetoapplicationuser.resx">
+      <DependentUpon>201701140203032_adddrivinglicensetoapplicationuser.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -589,7 +605,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>25055</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:25055/</IISUrl>
+          <IISUrl>https://localhost:44300/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
