@@ -289,6 +289,14 @@
     <Compile Include="Migrations\201701161818509_addrentaltable.Designer.cs">
       <DependentUpon>201701161818509_addrentaltable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701161919512_addcolumnMovieAvailability.cs" />
+    <Compile Include="Migrations\201701161919512_addcolumnMovieAvailability.Designer.cs">
+      <DependentUpon>201701161919512_addcolumnMovieAvailability.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701161923139_addcolumnMovieAvailability-force.cs" />
+    <Compile Include="Migrations\201701161923139_addcolumnMovieAvailability-force.Designer.cs">
+      <DependentUpon>201701161923139_addcolumnMovieAvailability-force.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customers.cs" />
@@ -629,6 +637,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701161818509_addrentaltable.resx">
       <DependentUpon>201701161818509_addrentaltable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701161919512_addcolumnMovieAvailability.resx">
+      <DependentUpon>201701161919512_addcolumnMovieAvailability.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701161923139_addcolumnMovieAvailability-force.resx">
+      <DependentUpon>201701161923139_addcolumnMovieAvailability-force.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

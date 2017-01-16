@@ -33,6 +33,8 @@ namespace cursoVidly.Controllers.API
 
              foreach (var movie in movies)
              {
+                 movie.NumberAvailable--;
+                 
                  //if (movie.NumberAvailable == 0)
                  //    return BadRequest("Movie is not available.");
 

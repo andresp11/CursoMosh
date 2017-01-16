@@ -32,5 +32,7 @@ namespace cursoVidly.DTOS
         public int stock { get; set; }
 
         public Genre genre { get; set; }
+
+        public int NumberAvailable { get; set; }
     }
 }
