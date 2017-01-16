@@ -204,6 +204,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
+    <Compile Include="Controllers\RentalsController.cs" />
     <Compile Include="DTOS\CustomerDTO.cs" />
     <Compile Include="DTOS\GenreDTO.cs" />
     <Compile Include="DTOS\MembershipTypeDTO.cs" />
@@ -296,6 +297,10 @@
     <Compile Include="Migrations\201701161923139_addcolumnMovieAvailability-force.cs" />
     <Compile Include="Migrations\201701161923139_addcolumnMovieAvailability-force.Designer.cs">
       <DependentUpon>201701161923139_addcolumnMovieAvailability-force.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701162000442_agregacolumnadipsonibilidad.cs" />
+    <Compile Include="Migrations\201701162000442_agregacolumnadipsonibilidad.Designer.cs">
+      <DependentUpon>201701162000442_agregacolumnadipsonibilidad.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -568,6 +573,7 @@
     <Content Include="Views\Customers\CustomerForm.cshtml" />
     <Content Include="Views\Movies\MoviesForm.cshtml" />
     <Content Include="Views\Movies\ReadOnlyList.cshtml" />
+    <Content Include="Views\Rentals\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -643,6 +649,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701161923139_addcolumnMovieAvailability-force.resx">
       <DependentUpon>201701161923139_addcolumnMovieAvailability-force.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701162000442_agregacolumnadipsonibilidad.resx">
+      <DependentUpon>201701162000442_agregacolumnadipsonibilidad.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

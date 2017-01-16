@@ -24,8 +24,6 @@ namespace cursoVidly.App_Start
             Mapper.CreateMap<CustomerDTO, Customers>().ForMember(m => m.Id, opt => opt.Ignore());
             Mapper.CreateMap<MovieDTO, Movies>().ForMember(m => m.Id, opt => opt.Ignore());
 
-            Mapper.CreateMap<Movies, MovieDTO>();
-            Mapper.CreateMap<MovieDTO, Movies>();
             Mapper.CreateMap<NewRentalDTO,Rental>();
         }
     }
