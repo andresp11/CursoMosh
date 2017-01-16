@@ -18,6 +18,7 @@ namespace cursoVidly.App_Start
             Mapper.CreateMap<Movies, MovieDTO>();
             Mapper.CreateMap<MembershipType, MembershipTypeDTO>();
             Mapper.CreateMap<Genre, GenreDTO>();
+            Mapper.CreateMap<Rental, NewRentalDTO>();
 
             //Dto to Domain
             Mapper.CreateMap<CustomerDTO, Customers>().ForMember(m => m.Id, opt => opt.Ignore());
@@ -25,6 +26,7 @@ namespace cursoVidly.App_Start
 
             Mapper.CreateMap<Movies, MovieDTO>();
             Mapper.CreateMap<MovieDTO, Movies>();
+            Mapper.CreateMap<NewRentalDTO,Rental>();
         }
     }
 
