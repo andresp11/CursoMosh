@@ -11262,7 +11262,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sFirst": "First",
+			    "sFirst": "Primero",//"sFirst": "First",
 	
 	
 				/**
@@ -11285,7 +11285,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sLast": "Last",
+				"sLast": "Ultimo",//"sLast": "Last",
 	
 	
 				/**
@@ -11308,7 +11308,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sNext": "Next",
+				"sNext": "Siguiente",//"sNext": "Next",
 	
 	
 				/**
@@ -11331,7 +11331,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sPrevious": "Previous"
+				"sPrevious": "Anterior",//"sPrevious": "Previous"
 			},
 	
 			/**
@@ -11354,7 +11354,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sEmptyTable": "No data available in table",
+			"sEmptyTable": "Informacion de la tabla no disponible",//"sEmptyTable": "No data available in table",
 	
 	
 			/**
@@ -11386,7 +11386,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+			"sInfo": "Mostrando _START_ de _END_ de _TOTAL_ registros",//"sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
 	
 	
 			/**
@@ -11407,7 +11407,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfoEmpty": "Showing 0 to 0 of 0 entries",
+			"sInfoEmpty": "Despliega 0 en 0 de 0 entradas",//"sInfoEmpty": "Showing 0 to 0 of 0 entries",
 	
 	
 			/**
@@ -11547,7 +11547,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sLengthMenu": "Show _MENU_ entries",
+			"sLengthMenu": "Despliega _MENU_ Registros",//"sLengthMenu": "Show _MENU_ entries",
 	
 	
 			/**
@@ -11627,7 +11627,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sSearch": "Search:",
+			"sSearch": "Busca:",//"sSearch": "Search:"
 	
 	
 			/**
