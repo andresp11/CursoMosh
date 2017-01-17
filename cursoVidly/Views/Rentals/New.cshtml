@@ -1,4 +1,4 @@
-﻿@Model dynamic
+﻿@model dynamic
 @{
     ViewBag.Title = "New Rental";
 
@@ -6,7 +6,7 @@
 
 <h2>New Rental</h2>
 
-<form>
+<form id="newRental">
     <div class="form-group">
         <label>Customer</label>
         <div class="tt-container">
@@ -84,6 +84,18 @@
                     $("#movie").typeahead("val", "");
 
                     vm.movieIds.push(movie.id);
+                });
+                $("#newRental").submit(function (e) {
+                    e.preventDefault();
+                    $.ajax({
+                        url: "/api/newRentals",
+                        method: "post",
+                        data: vm
+                    }).done(function () {
+                        toastr.success("Rentals succesfully recorded.");
+                    }).fail(function () {
+                        toastr.error("Something unexpected happened.");
+                    });
                 });
 
 

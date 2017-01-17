@@ -22,10 +22,14 @@ namespace cursoVidly.Controllers.API
         }
 
         //GET /API/Movies
-        public IHttpActionResult GetMovies()
+        public IHttpActionResult GetMovies(string query = null)
         {
-            var movieDTO = _context.Movies.Include(c=> c.genre).
-                                ToList().
+            var movieQuery = _context.Movies.Include(c => c.genre).Where(c=> c.NumberAvailable > 0);
+            if (!string.IsNullOrWhiteSpace(query))
+            {
+                movieQuery = movieQuery.Where(c => c.Name.Contains(query));
+            }
+            var movieDTO = movieQuery.ToList().
                                 Select(Mapper.Map<Movies, MovieDTO>);
             return Ok(movieDTO);
         }
@@ -33,6 +37,7 @@ namespace cursoVidly.Controllers.API
         //Get /api/Movies/1
         public IHttpActionResult GetMovie(int id)
         {
+
             var movie = _context.Movies.SingleOrDefault(c => c.Id == id);
             if (movie == null)
             {

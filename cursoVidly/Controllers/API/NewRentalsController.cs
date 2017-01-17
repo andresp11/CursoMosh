@@ -23,7 +23,7 @@ namespace cursoVidly.Controllers.API
 
         // post /api/Movies
         [HttpPost]
-        public IHttpActionResult CreateNewRental(NewRentalDTO rentalDTO)
+        public IHttpActionResult CreateNewRentals(NewRentalDTO rentalDTO)
         {
             var customer = _context.Customer.Single(
                  c => c.Id == rentalDTO.CustomerId);
