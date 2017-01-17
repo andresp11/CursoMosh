@@ -21,10 +21,16 @@ namespace cursoVidly.Controllers.API
         }
 
         //GET /API/CUSTOMERS
-        public IHttpActionResult GetCustomers()
+        public IHttpActionResult GetCustomers(string query = null)
         {
-            var customerDTO =   _context.Customer.Include(c=>c.MembershipType).
-                                ToList().
+            var customerQuery = _context.Customer.Include(c => c.MembershipType);
+
+            if (!string.IsNullOrWhiteSpace(query))
+            {
+                customerQuery = customerQuery.Where(c => c.Name.Contains(query));
+            }
+
+            var customerDTO = customerQuery.ToList().
                                 Select(Mapper.Map<Customers,CustomerDTO>);
             return Ok(customerDTO);
         }
